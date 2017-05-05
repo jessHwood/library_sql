@@ -20,7 +20,7 @@
 
 
 -- Find out how many books written before 1980 were by authors not from the US.
-	SELECT * FROM books JOIN authors ON books.author_id = authors.id and authors.nationality <>'United States of America';
+	SELECT * FROM books JOIN authors ON books.author_id = authors.id and books.publication_date < 1980 and authors.nationality <>'United States of America';
 
 -- For these last two, you should not need a JOIN.
 
